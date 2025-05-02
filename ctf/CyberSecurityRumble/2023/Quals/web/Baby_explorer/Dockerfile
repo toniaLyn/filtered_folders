@@ -1,0 +1,9 @@
+FROM kalilinux/kali-rolling
+
+COPY flag.txt /
+
+ADD app/ /var/www/html
+ADD files/ /files
+
+RUN chown -R root:root /files
+RUN chmod -R 775 /files
